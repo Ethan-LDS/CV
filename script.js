@@ -120,7 +120,7 @@ const donnees = {
   photos: {
     competences: { gauche: ["classe.jpg", "cpu.jpeg", "pc.jpeg"], droite: ["linux.jpg", "hdd.jpg", "cisco.jpg"] },
     projets:     { gauche: ["2DS.jpg", "Lite.jpg", "joycon.jpg"], droite: ["port.jpg", "Bureau.jpg", "Casinode.png"] },
-    experiences: { gauche: ["portable.jpg", "samsung.jpg", "test.jpg"], droite: ["serveur.jpg", "leclerc.png", "bios.jpg"] },
+    experiences: { gauche: ["portable.jpg", "samsung.jpg", "test.jpg"], droite: ["serveur.jpg", "leclerc.jpg", "bios.jpg"] },
     loisirs:     { gauche: ["P4.webp", "oot.webp", "FFX.jpg"], droite: ["FF7.jpg", "tlou.jpg", "P5.jpg"] },
     
   },
