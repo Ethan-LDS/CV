@@ -356,7 +356,7 @@ const boutonsMenu = document.querySelectorAll("#menu button");
 
 /* Numéro de version des photos : change-le (3, 4, 5...) quand tu remplaces ou retires
    des photos, pour forcer le navigateur à recharger les nouvelles. */
-const VERSION_PHOTOS = 4;
+const VERSION_PHOTOS = 5;
 const avecVersion = src => src + (src.includes("?") ? "&" : "?") + "v=" + VERSION_PHOTOS;
 
 /* Préchargement : toutes les photos sont téléchargées et décodées dès l'ouverture
