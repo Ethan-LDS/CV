@@ -1,6 +1,6 @@
 const donnees = {
   nom: "Le Duff Ethan",
-  initiales: "EL",
+  initiales: "EL",                        
   photo: "Photo.jpg",
   titre: "Terminale Bac Pro CIEL : réseaux, systèmes et maintenance informatique",
   accroche: "Je m'appelle Ethan Le Duff et je suis en classe de Terminale Bac Pro CIEL au lycée Jean Moulin à Thouars. Je souhaite m'orienter vers la maintenance informatique, notamment celle des appareils multimédias comme les PC, les consoles de jeux et les téléphones portables.",
@@ -79,7 +79,7 @@ const donnees = {
   projets: [
     {
       nom: "Réparation de console",
-      description: "Récemment, j'ai investi dans du matériel afin de me lancer dans la réparation de consoles à domicile. Passionné de jeux vidéo depuis mon plus jeune âge, il était évident qu'en intégrant ma filière actuelle, je m'intéresserais au fonctionnement de ces machines. C'est pourquoi j'ai décidé d'acheter des consoles HS sur des sites de revente pour leur donner une seconde vie. Mon objectif est double : préserver ces supports rétro et générer un peu de revenus. J'ai fait mes débuts en nettoyant mes propres vieilles consoles, puis j'ai progressivement appris à remplacer certaines pièces (boutons, coques, écrans…). Aujourd'hui, je m'initie également au maniement du fer à souder pour réparer les composants défectueux.",
+      description: "Récemment, j’ai investi dans du matériel afin de me lancer dans la réparation de consoles à domicile. Passionné de jeux vidéo depuis mon plus jeune âge, il était évident qu'en intégrant ma filière actuelle, je m'intéresserais au fonctionnement de ces machines. C’est pourquoi j’ai décidé d’acheter des consoles HS sur des sites de revente pour leur donner une seconde vie. Mon objectif est double : préserver ces supports rétro et générer un peu de revenus. J’ai fait mes débuts en nettoyant mes propres vieilles consoles, puis j'ai progressivement appris à remplacer certaines pièces (boutons, coques, écrans…). Aujourd'hui, je m'initie également au maniement du fer à souder pour réparer les composants défectueux.",
       points: [],
       lien: "",
       texteLien: ""
@@ -95,14 +95,14 @@ const donnees = {
   loisirs: [
     {
       nom: "Les jeux vidéo",
-      description: "« Ma passion numéro un est le jeu vidéo. Loin d'être un simple divertissement, c'est un média qui m'a énormément appris. À travers lui, j'ai pu m'attacher à des personnages marquants, suivre des scénarios captivants et me surpasser face à de grands défis de conception. Joueur passionné de JRPG comme Persona ou Final Fantasy, j'aime particulièrement l'aspect tactique : analyser une situation en combat pour trouver la meilleure stratégie, ou optimiser l'équipement de chaque coéquipier en amont. J'apprécie tout autant les jeux d'aventure tels que Zelda ou The Last of Us, qui me plongent au cœur d'univers et d'histoires immersives. Pour moi, le jeu vidéo est un art à part entière, et c'est cette richesse qui me passionne. »",
+      description: "« Ma passion numéro un est le jeu vidéo. Loin d'être un simple divertissement, c'est un média qui m'a énormément appris. À travers lui, j'ai pu m'attacher à des personnages marquants, suivre des scénarios captivants et me surpasser face à de grands défis de conception. Joueur passionné de JRPG comme Persona ou Final Fantasy, j’aime particulièrement l’aspect tactique : analyser une situation en combat pour trouver la meilleure stratégie, ou optimiser l'équipement de chaque coéquipier en amont. J'apprécie tout autant les jeux d'aventure tels que Zelda ou The Last of Us, qui me plongent au cœur d'univers et d'histoires immersives. Pour moi, le jeu vidéo est un art à part entière, et c’est cette richesse qui me passionne. »",
       points: [],
       lien: "",
       texteLien: ""
     },
     {
       nom: "Réparation, nettoyage et reconditionnement de consoles",
-      description: "Comme je l'ai dit précédemment, sur la page <button class='lien-texte-interne' data-aller='projets' style='color:var(--accent); background:none; border:none; padding:0; font:inherit; font-weight:bold; cursor:pointer; text-decoration:underline;'>Mes projets</button>, je travaille actuellement sur le nettoyage et la réparation de consoles.",
+      description: "Comme dit précédemment dans la page <button class='lien-texte-interne' data-aller='projets' style='color:var(--accent); background:none; border:none; padding:0; font:inherit; font-weight:bold; cursor:pointer; text-decoration:underline;'>Mes projets</button>, je travaille actuellement sur le nettoyage et la réparation de consoles.",
       points: [],
       lien: "",
       texteLien: ""
@@ -112,22 +112,22 @@ const donnees = {
   photos: {
     competences: { gauche: ["classe.jpg", "cpu.jpeg", "pc.jpeg"], droite: ["linux.jpg", "hdd.jpg", "cisco.jpg"] },
     projets:     { gauche: ["2DS.jpg", "Lite.jpg", "joycon.jpg"], droite: ["port.jpg", "Bureau.jpg", "Casinode.png"] },
-    experiences: { gauche: ["portable.jpg", "samsung.jpg", "test.jpg"], droite: ["serveur.jpg", "leclerc.jpeg", "bios.jpg"] },
+    experiences: { gauche: ["portable.jpg", "samsung.jpg", "test.jpg"], droite: ["serveur.jpg", "leclerc.png", "bios.jpg"] },
     loisirs:     { gauche: ["P4.webp", "oot.webp", "FFX.jpg"], droite: ["FF7.jpg", "tlou.jpg", "P5.jpg"] },
-
+    
   },
 
    contact: [
     { label: "Email", valeur: "leduffethan09@gmail.com", image: "mail.png" },
     { label: "Téléphone", valeur: "07 66 87 90 47", image: "tel.webp" },
-    { label: "GitHub", valeur: "<a href='https://github.com/Ethan-LDS' target='_blank' rel='noopener' style='color:var(--accent-2); text-decoration:none; font-weight:bold;'>Ethan-LDS</a>", image: "github.webp" },
+    { label: "GitHub", valeur: "<a href='https://github.com' target='_blank' rel='noopener' style='color:var(--accent-2); text-decoration:none; font-weight:bold;'>Ethan-LDS</a>", image: "github.webp" },
     { label: "Ville", valeur: "Bressuire", image: "addresse.jpg" }
   ]
 };
 
 const donneesEN = {
   titre: "Final-year (3rd year) Bac Pro CIEL: networks, systems and IT maintenance",
-  accroche: "My name is Ethan Le Duff and I am in the final year of a Bac Pro CIEL (vocational baccalaureate in cybersecurity, IT, networks and electronics) at Lycée Jean Moulin in Thouars. I want to work in IT maintenance, especially for multimedia devices such as PCs, game consoles and mobile phones.",
+  accroche: "My name is Ethan Le Duff and I am in the final year of a Bac Pro CIEL (vocational baccalaureate in IT, networks and electronics) at Lycée Jean Moulin in Thouars. I want to work in IT maintenance, especially for multimedia devices such as PCs, game consoles and mobile phones.",
 
   competences: [
     { categorie: "Networks",
@@ -180,13 +180,13 @@ const donneesEN = {
   ],
 
   jobsEte: [
-    "Maize detasselling (July 2025 and 2026)",
-    "Waiting tables at a wedding (14 June 2025)"
+    "Corn detasseling (July 2025 and 2026)",
+    "Waiting service at a wedding (14 June 2025)"
   ],
 
   projets: [
     { nom: "Console repair",
-      description: "Recently, I invested in equipment to start repairing game consoles at home. I have loved video games since I was a child, so it was natural that, once I started my current course, I became interested in how these machines work. That is why I decided to buy broken consoles on resale websites to give them a second life. My goal is twofold: to preserve these retro consoles and to earn a little income. I started by cleaning my own old consoles, then gradually learned to replace some parts (buttons, shells, screens...). Today, I am also learning to use a soldering iron to repair faulty components." },
+      description: "Recently, I invested in equipment to start repairing game consoles at home. I have loved video games since I was little, so it was natural that, once I started my current course, I became interested in how these machines work. That is why I decided to buy broken consoles on resale websites to give them a second life. My goal is twofold: to preserve these retro consoles and to earn a little income. I started by cleaning my own old consoles, then gradually learned to replace some parts (buttons, shells, screens...). Today, I am also learning to use a soldering iron to repair faulty components." },
     { nom: "Casinodé",
       description: "An online dice game that I created myself in HTML, CSS and JavaScript.",
       texteLien: "Play Casinodé" }
@@ -194,7 +194,7 @@ const donneesEN = {
 
   loisirs: [
     { nom: "Video games",
-      description: "“My number one passion is video games. Far from being simple entertainment, it is a medium that has taught me a great deal. Through it, I have become attached to memorable characters, followed captivating stories and pushed myself to overcome tough design challenges. As a passionate fan of JRPGs such as Persona or Final Fantasy, I particularly enjoy the tactical side: analysing a situation in battle to find the best strategy, or optimising each teammate's equipment beforehand. I enjoy adventure games such as Zelda or The Last of Us just as much, which immerse me in rich worlds and stories. For me, video games are an art form in their own right, and it is this richness that fascinates me.”" },
+      description: "“My number one passion is video games. Far from being simple entertainment, it is a medium that has taught me a great deal. Through it, I have become attached to memorable characters, followed captivating stories and pushed myself against great design challenges. As a passionate fan of JRPGs such as Persona or Final Fantasy, I particularly enjoy the tactical side: analysing a situation in battle to find the best strategy, or optimising each teammate's equipment beforehand. I enjoy adventure games such as Zelda or The Last of Us just as much, which immerse me in rich worlds and stories. For me, video games are an art form in their own right, and it is this richness that fascinates me.”" },
     { nom: "Repairing, cleaning and refurbishing consoles",
       description: "As mentioned earlier on the <button class='lien-texte-interne' data-aller='projets' style='color:var(--accent); background:none; border:none; padding:0; font:inherit; font-weight:bold; cursor:pointer; text-decoration:underline;'>My projects</button> page, I am currently working on cleaning and repairing consoles." }
   ],
@@ -216,7 +216,7 @@ const TEXTES = {
     competencesIntro: "Voici les compétences que j'ai acquises pendant les cours et chez moi.",
     experiencesIntro: "Mes trois stages en entreprise. Cliquez sur un stage pour afficher ou masquer le détail.",
     saisonniers: "Jobs saisonniers",
-    loisirsIntro: "Il est temps que je parle de ce que j'aime faire en dehors des cours.",
+    loisirsIntro: "Il est temps que je parle de ce que j'aime faire en dehors des cours..",
     titrePage: "CV de",
     langueBouton: "Switch to English"
   },
@@ -226,9 +226,9 @@ const TEXTES = {
     intro: "Browse the pages to find out who I am and what I can do.",
     voirCompetences: "See my skills",
     competencesIntro: "These are the skills I have gained in class and at home.",
-    experiencesIntro: "My three internships. Click on an internship to show or hide the details.",
+    experiencesIntro: "My three work placements. Click on a placement to show or hide the details.",
     saisonniers: "Seasonal jobs",
-    loisirsIntro: "Time to talk about what I like to do outside of class.",
+    loisirsIntro: "Time to talk about what I like to do outside of class..",
     titrePage: "CV of",
     langueBouton: "Passer en français"
   }
@@ -252,8 +252,8 @@ function donneesPourLangue(l) {
 }
 
 let langue = "fr";
-let d = donnees;
-let ui = TEXTES.fr;
+let d = donnees;          
+let ui = TEXTES.fr;       
 
 const carte = p => `
   <article class="projet">
@@ -268,7 +268,7 @@ const sections = {
     <section class="hero">
       <div class="photo">
         <span>${d.initiales}</span>
-        <img src="${DOSSIER_PHOTOS}${d.photo}" alt="${ui.altPhoto} ${d.nom}" onerror="this.remove()">
+        <img src="${d.photo}" alt="${ui.altPhoto} ${d.nom}" onerror="this.remove()">
       </div>
       <div class="hero-texte">
         <h1>${d.nom}</h1>
@@ -313,7 +313,7 @@ const sections = {
         <div class="ligne-contact" style="display: flex; align-items: center; justify-content: space-between; background: var(--fond); padding: 12px 20px; border-radius: 12px; border: 1px solid var(--trait);">
           <div class="contact-gauche" style="display: flex; align-items: center; gap: 12px;">
             <div class="rond-mini-image" style="width: 32px; height: 32px; background: var(--panneau); border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;">
-              ${c.image ? `<img src="${DOSSIER_PHOTOS}${c.image}" alt="" style="width:100%; height:100%; object-fit:cover;">` : ""}
+              ${c.image ? `<img src="${c.image}" alt="" style="width:100%; height:100%; object-fit:cover;">` : ""}
             </div>
             <span style="font-weight: 600; color: var(--texte);">${c.label}</span>
           </div>
@@ -330,12 +330,11 @@ const coteGauche = document.getElementById("cote-gauche");
 const coteDroit = document.getElementById("cote-droite");
 const boutonsMenu = document.querySelectorAll("#menu button");
 
-const DOSSIER_PHOTOS = "photos/";
-const VERSION_PHOTOS = 5;
-const avecVersion = src => DOSSIER_PHOTOS + src + (src.includes("?") ? "&" : "?") + "v=" + VERSION_PHOTOS;
+const VERSION_PHOTOS = 3;
+const avecVersion = src => src + (src.includes("?") ? "&" : "?") + "v=" + VERSION_PHOTOS;
 
-const photosChargees = {};
-const imagesEnMemoire = [];
+const photosChargees = {};   
+const imagesEnMemoire = [];  
 
 function precharger() {
   try {
@@ -355,14 +354,14 @@ function precharger() {
       imagesEnMemoire.push(img);
     });
   } catch (e) {
-    console.warn("Préchargement ignoré :", e);
+    console.warn("Préchargement ignoré :", e);  
   }
 }
 precharger();
 
 function cadres(liste) {
   return (liste || []).map((src, i) => {
-    const ratio = photosChargees[src];
+    const ratio = photosChargees[src];   
     return `
     <div class="cadre-photo${ratio ? " remplie" : ""}" style="--i:${i}${ratio ? `;--ratio:${ratio}` : ""}">
       <span>Photo à ajouter</span>
@@ -455,8 +454,8 @@ const menu = document.getElementById("menu");
 let dernierY = window.scrollY;
 window.addEventListener("scroll", () => {
   const y = window.scrollY;
-  if (Math.abs(y - dernierY) < 8) return;
-  if (y > dernierY && y > 80) menu.classList.add("cache");
-  else menu.classList.remove("cache");
+  if (Math.abs(y - dernierY) < 8) return;                    
+  if (y > dernierY && y > 80) menu.classList.add("cache");   
+  else menu.classList.remove("cache");                       
   dernierY = y;
 }, { passive: true });
