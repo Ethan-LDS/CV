@@ -341,7 +341,7 @@ details .puces { margin-top: 10px; }
     gap: 0;
     overflow: hidden;
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.35;
   }
   .cote.gauche { left: 0; }
   .cote.droite { right: 0; }
@@ -349,7 +349,7 @@ details .puces { margin-top: 10px; }
   .cadre-photo { width: 80%; height: auto; border-width: 5px; }
   .cadre-photo:not(.remplie) { display: none; }
   .page { position: relative; z-index: 1; }
-  main { background: rgba(24, 36, 47, 0.96); }
+  main { background: rgba(24, 36, 47, 0.88); }
   main.accueil { background: transparent; }
   .hero { flex-direction: column; text-align: center; gap: 28px; }
   .photo { width: 180px; height: 180px; }
