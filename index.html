@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV interactif</title>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+  <nav id="menu" aria-label="Menu principal">
+    <button data-section="accueil">Accueil</button>
+    <button data-section="competences">Compétences</button>
+    <button data-section="projets">Mes projets</button>
+    <button data-section="experiences">Expériences</button>
+    <button data-section="loisirs">Loisirs</button>
+    <button data-section="contact">Contact/Réseau</button>
+  </nav>
+
+  <div class="page">
+    <aside class="cote gauche" id="cote-gauche" aria-label="Photos"></aside>
+    <main id="contenu" tabindex="-1"></main>
+    <aside class="cote droite" id="cote-droite" aria-label="Photos"></aside>
+  </div>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>
