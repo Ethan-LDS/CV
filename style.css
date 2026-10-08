@@ -1,13 +1,12 @@
-/* ====== COULEURS : change-les ici, tout le site suit ====== */
 :root {
   --fond: #0e1620;
   --panneau: #18242f;
   --texte: #f2efe8;
   --texte-doux: #b3bfca;
-  --accent: #f0a830;      /* boutons actifs, anneau de la photo */
-  --accent-2: #3ec1a8;    /* petits détails */
-  --trait: #26384a;       /* fines bordures */
-  --papier: #f4efe6;      /* bord blanc des photos */
+  --accent: #f0a830;
+  --accent-2: #3ec1a8;
+  --trait: #26384a;
+  --papier: #f4efe6;
 }
 
 * { box-sizing: border-box; }
@@ -24,24 +23,22 @@ body {
   min-height: 100vh;
 }
 
-/* ====== MENU EN HAUT ====== */
 nav {
-  position: sticky;           /* reste visible quand on descend dans la page */
+  position: sticky;
   top: 0;
   z-index: 50;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  padding: 14px 70px;         /* de la place de chaque côté pour le drapeau */
+  padding: 14px 70px;
   background: rgba(14, 22, 32, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--trait);
   transition: transform 0.3s ease;
 }
-nav.cache { transform: translateY(-100%); }   /* menu masqué quand on descend */
+nav.cache { transform: translateY(-100%); }
 
-/* Drapeau de langue, en haut à droite */
 #langue {
   position: absolute;
   right: 16px;
@@ -66,7 +63,7 @@ button {
   background: var(--panneau);
   color: var(--texte);
   padding: 8px 20px;
-  border-radius: 999px;       /* boutons tout ronds */
+  border-radius: 999px;
 }
 button:hover { border-color: var(--accent-2); }
 button:focus-visible,
@@ -84,50 +81,47 @@ nav button.actif,
   font-weight: 600;
 }
 
-/* ====== MISE EN PAGE : photos | contenu | photos ====== */
 .page {
   display: grid;
-  grid-template-columns: 1fr minmax(0, 720px) 1fr;   /* 720px = largeur du contenu au milieu */
+  grid-template-columns: 1fr minmax(0, 720px) 1fr;
   gap: 20px;
   align-items: start;
   padding: 0 16px;
   margin: 32px 0 56px;
 }
 
-/* ====== PHOTOS EN COLLAGE : penchées, l'une sur l'autre ====== */
 .cote {
-  position: sticky;           /* elles suivent quand on descend */
+  position: sticky;
   top: 92px;
   display: flex;
   flex-direction: column;
   padding: 12px 10px;
-  --haut: calc((100vh - 50px) / 3);   /* hauteur max d'une photo : 3 photos tiennent dans l'écran */
+  --haut: calc((100vh - 50px) / 3);
 }
 .cote.gauche { align-items: flex-end; }
 .cote.droite { align-items: flex-start; }
 
 .cadre-photo {
   position: relative;
-  z-index: calc(20 - var(--i, 0));      /* la 1re photo est au-dessus de la 2e, etc. */
+  z-index: calc(20 - var(--i, 0));
   display: grid;
   place-items: center;
-  --ratio: 1.25;                        /* forme d'un cadre vide (largeur / hauteur) */
-  aspect-ratio: var(--ratio);           /* une photo ajoutée remplace cette valeur par sa propre forme */
-  width: min(100%, calc(var(--haut) * var(--ratio)));   /* les photos remplissent la colonne */
+  --ratio: 1.25;
+  aspect-ratio: var(--ratio);
+  width: min(100%, calc(var(--haut) * var(--ratio)));
   background: #223140;
-  border: 8px solid var(--papier);      /* bord blanc façon photo imprimée */
+  border: 8px solid var(--papier);
   border-radius: 6px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
   color: var(--texte-doux);
   font-size: 0.8rem;
   text-align: center;
   overflow: hidden;
-  backface-visibility: hidden;          /* évite le flou dû à l'inclinaison */
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.cadre-photo + .cadre-photo { margin-top: calc(var(--haut) * -0.18); }   /* chevauchement */
+.cadre-photo + .cadre-photo { margin-top: calc(var(--haut) * -0.18); }
 
-/* Inclinaisons : tu peux changer les degrés (deg) */
 .cote.gauche .cadre-photo:nth-child(3n+1) { transform: rotate(-4deg) translateX(-6px); }
 .cote.gauche .cadre-photo:nth-child(3n+2) { transform: rotate(3deg)  translateX(8px); }
 .cote.gauche .cadre-photo:nth-child(3n+3) { transform: rotate(-2deg) translateX(-2px); }
@@ -135,7 +129,6 @@ nav button.actif,
 .cote.droite .cadre-photo:nth-child(3n+2) { transform: rotate(-3deg) translateX(-8px); }
 .cote.droite .cadre-photo:nth-child(3n+3) { transform: rotate(2deg)  translateX(2px); }
 
-/* Cadre vide : un pointillé et un petit texte */
 .cadre-photo::before {
   content: "";
   position: absolute;
@@ -149,39 +142,34 @@ nav button.actif,
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* la photo remplit le cadre sans être déformée */
+  object-fit: cover;
   image-rendering: auto;
-  transform: translateZ(0);   /* rendu net même avec l'inclinaison */
+  transform: translateZ(0);
 }
 .cadre-photo.remplie::before,
 .cadre-photo.remplie span { display: none; }
 
-
-/* ====== CONTENU (centré) ====== */
 main {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 150px);
   padding: 28px;
-  text-align: center;         /* centré horizontalement */
+  text-align: center;
   background: var(--panneau);
   border: 1px solid var(--trait);
   border-radius: 20px;
 }
 main:focus { outline: none; }
 
-/* Écriture plus grande dans toutes les pages */
 main { font-size: 1.3rem; }
 main h3 { font-size: 1.6rem; }
 main .saisonnier { font-size: 1.05rem; }
 main summary span { font-size: 1.1rem; }
 main .lien-bouton, main .onglet { font-size: 1.15rem; }
 
-/* Compétences : les boutons juste sous le titre */
 main.competences > h2 + * { margin-top: 0; }
 main.competences > :last-child { margin-bottom: 0; }
 
-/* Accueil : plus large, sans photos sur les côtés, texte plus gros */
 .page:has(main.accueil) { grid-template-columns: minmax(0, 1100px); justify-content: center; }
 .page:has(main.accueil) .cote { display: none; }
 main.accueil { font-size: 1.5rem; }
@@ -189,32 +177,29 @@ main.accueil .hero-texte { max-width: 700px; }
 main.accueil .hero .titre { font-size: 1.6rem; }
 main.accueil .hero h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); }
 
-/* Le titre de la page : gros, tout en haut */
 main > h2 {
-  align-self: center;         /* le titre prend la largeur de son texte */
+  align-self: center;
   margin: 0 0 28px;
   font-size: clamp(2.3rem, 6vw, 3.4rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
-main > h2::after {            /* petit trait doré sous le titre */
+main > h2::after {
   content: "";
   display: block;
-  width: 100%;                /* le trait a la même largeur que le mot */
+  width: 100%;
   height: 5px;
   margin: 16px auto 0;
   border-radius: 3px;
   background: var(--accent);
 }
 
-/* Le reste de la page est centré dans l'espace sous le titre */
 main > h2 + * { margin-top: auto; }
 main > :last-child { margin-bottom: auto; }
 
 h3 { margin: 0 0 8px; font-size: 1.35rem; }
 
-/* Transition : la page apparaît en douceur à chaque clic */
 @keyframes apparition {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
@@ -224,7 +209,6 @@ main.entree { animation: apparition 0.35s ease; }
   main.entree { animation: none; }
 }
 
-/* ====== PAGE D'ACCUEIL : photo à gauche, texte à droite ====== */
 main.accueil {
   background: transparent;
   border-color: transparent;
@@ -234,7 +218,7 @@ main.accueil > .hero { margin-block: auto; }
 
 .hero {
   display: flex;
-  align-items: center;        /* photo et texte centrés verticalement */
+  align-items: center;
   gap: 40px;
   padding: 24px 8px;
   text-align: left;
@@ -247,7 +231,7 @@ main.accueil > .hero { margin-block: auto; }
   place-items: center;
   width: 240px;
   height: 240px;
-  border-radius: 50%;         /* le rond */
+  border-radius: 50%;
   border: 5px solid var(--accent);
   box-shadow: 0 0 0 10px rgba(240, 168, 48, 0.15), 0 20px 50px rgba(0, 0, 0, 0.4);
   background: linear-gradient(135deg, var(--accent-2), #2b6f8f);
@@ -270,11 +254,9 @@ main.accueil > .hero { margin-block: auto; }
 }
 .hero .titre { margin: 0 0 18px; color: var(--accent-2); font-weight: 600; }
 
-/* ====== COMPÉTENCES, PROJETS, EXPÉRIENCES, ETC. ====== */
 .onglets { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 12px 0 16px; }
 .onglet { background: var(--fond); border-color: var(--fond); }
 
-/* Les listes : le bloc est centré, le texte reste aligné à gauche pour rester lisible */
 .puces { width: fit-content; max-width: 100%; margin-inline: auto; padding-left: 20px; text-align: left; }
 .puces li { margin-bottom: 6px; }
 .puces li::marker { color: var(--accent-2); }
@@ -289,7 +271,6 @@ summary { cursor: pointer; font-weight: 600; }
 summary span { display: block; font-weight: 400; color: var(--texte-doux); font-size: 0.9rem; }
 details .puces { margin-top: 10px; }
 
-/* Les 3 stages : mis en évidence */
 .stage {
   border-top: 4px solid var(--accent);
   padding: 16px 20px;
@@ -297,7 +278,6 @@ details .puces { margin-top: 10px; }
 }
 .stage summary { font-size: 1.2rem; }
 
-/* Jobs saisonniers : petit et discret */
 .saisonnier {
   margin: 28px 0 0;
   padding-top: 12px;
@@ -306,7 +286,6 @@ details .puces { margin-top: 10px; }
   color: var(--texte-doux);
 }
 
-/* Les projets */
 .projet {
   background: var(--fond);
   border-radius: 14px;
@@ -328,9 +307,7 @@ details .puces { margin-top: 10px; }
 }
 .doux { color: var(--texte-doux); }
 
-/* ====== PETITS ÉCRANS ====== */
 @media (max-width: 1280px) {
-  /* Une seule colonne : le contenu d'abord, les photos en dessous */
   .page { grid-template-columns: 1fr; }
   main { order: 1; min-height: 0; }
   .cote {
@@ -350,7 +327,6 @@ details .puces { margin-top: 10px; }
   #langue { right: 10px; top: 14px; transform: none; }
   nav button { padding: 8px 16px; }
 
-  /* Téléphone : les photos passent en fond d'écran, derrière le contenu */
   .cote {
     position: fixed;
     top: 0;
@@ -365,15 +341,15 @@ details .puces { margin-top: 10px; }
     gap: 0;
     overflow: hidden;
     pointer-events: none;
-    opacity: 0.4;              /* plus petit = fond plus discret */
+    opacity: 0.2;
   }
   .cote.gauche { left: 0; }
   .cote.droite { right: 0; }
   .cote.gauche, .cote.droite { align-items: center; }
   .cadre-photo { width: 80%; height: auto; border-width: 5px; }
-  .cadre-photo:not(.remplie) { display: none; }   /* pas de cadre vide en fond */
+  .cadre-photo:not(.remplie) { display: none; }
   .page { position: relative; z-index: 1; }
-  main { background: rgba(24, 36, 47, 0.82); }
+  main { background: rgba(24, 36, 47, 0.96); }
   main.accueil { background: transparent; }
   .hero { flex-direction: column; text-align: center; gap: 28px; }
   .photo { width: 180px; height: 180px; }
