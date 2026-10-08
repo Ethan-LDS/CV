@@ -268,7 +268,7 @@ const sections = {
     <section class="hero">
       <div class="photo">
         <span>${d.initiales}</span>
-        <img src="${d.photo}" alt="${ui.altPhoto} ${d.nom}" onerror="this.remove()">
+        <img src="${DOSSIER_PHOTOS}${d.photo}" alt="${ui.altPhoto} ${d.nom}" onerror="this.remove()">
       </div>
       <div class="hero-texte">
         <h1>${d.nom}</h1>
@@ -313,7 +313,7 @@ const sections = {
         <div class="ligne-contact" style="display: flex; align-items: center; justify-content: space-between; background: var(--fond); padding: 12px 20px; border-radius: 12px; border: 1px solid var(--trait);">
           <div class="contact-gauche" style="display: flex; align-items: center; gap: 12px;">
             <div class="rond-mini-image" style="width: 32px; height: 32px; background: var(--panneau); border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;">
-              ${c.image ? `<img src="${c.image}" alt="" style="width:100%; height:100%; object-fit:cover;">` : ""}
+              ${c.image ? `<img src="${DOSSIER_PHOTOS}${c.image}" alt="" style="width:100%; height:100%; object-fit:cover;">` : ""}
             </div>
             <span style="font-weight: 600; color: var(--texte);">${c.label}</span>
           </div>
@@ -330,8 +330,9 @@ const coteGauche = document.getElementById("cote-gauche");
 const coteDroit = document.getElementById("cote-droite");
 const boutonsMenu = document.querySelectorAll("#menu button");
 
-const VERSION_PHOTOS = 4;
-const avecVersion = src => src + (src.includes("?") ? "&" : "?") + "v=" + VERSION_PHOTOS;
+const DOSSIER_PHOTOS = "photos/";
+const VERSION_PHOTOS = 5;
+const avecVersion = src => DOSSIER_PHOTOS + src + (src.includes("?") ? "&" : "?") + "v=" + VERSION_PHOTOS;
 
 const photosChargees = {};
 const imagesEnMemoire = [];
